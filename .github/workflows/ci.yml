@@ -1,9 +1,9 @@
-name: Build, Test and Deploy to Github Pages
+name: Build and Test
 
 on:
   push:
     branches:
-      - master
+      - develop
 
 jobs:
   cicd:
@@ -27,10 +27,3 @@ jobs:
       - name: Test
         if: success()
         run: npm run test
-
-      - name: Deploy
-        if: success()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./public
