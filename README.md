@@ -1,4 +1,4 @@
-# dismantlingLearning
+# Dismantling Learning
 
 Plataforma abierta para la creación de cursos mediante repositorios.
 
@@ -25,7 +25,3 @@ gatsby develop
 ```
 npm run storybook
 ```
-
-[Netlify branch dev](https://dislearningdev.netlify.com/)
-
-[Netlify branch master](https://cocky-mccarthy-04be1a.netlify.com/)
