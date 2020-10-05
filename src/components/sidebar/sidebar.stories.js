@@ -2,8 +2,9 @@ import React from 'react';
 import Sidebar from './Sidebar';
 
 export default {
-  title: 'Sidebar',
+  title: 'Components',
 };
+
 const course = {
     'url': 'https://raw.githubusercontent.com/trigoporres/disCourses/master/JavaScript/course.json',
     'root': 'https://raw.githubusercontent.com/trigoporres/disCourses/master/JavaScript/',
@@ -26,8 +27,8 @@ const course = {
     'toc': '[{\'slug\':\'introduction\',\'title\':\'Qué es JavaScript\',\'path\':\'units/introduction.md\',\'type\':\'doc\'}]'
   };
 
-export const sidebar = () => <Sidebar course={course} />;
+export const SidebarStory = () => <Sidebar course={course} />;
 
-Sidebar.story = {
+SidebarStory.story = {
   name: 'Sidebar',
 };

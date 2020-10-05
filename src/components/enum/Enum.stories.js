@@ -1,22 +1,17 @@
 import React from "react"
 import Enum from './Enum';
+import { FaAdn } from 'react-icons/fa';
 
 export default {
-  title: 'Tags',
+  title: 'Components',
 };
 
-export const Tags = () =>
+export const Enum = () =>
   <Enum
-  items={[
-    {
-      name: 'javaScript'
-    }, {
-      name: 'courses'
-    }]}
-  icon={'folder-open'}
-  separator={' /'}>
-  </Enum>;
+    items={[{ name: 'term1' }, { name: 'term2' }]}
+    Icon={FaAdn}
+  />;
 
-  Enum.story = {
-    name: 'Enum',
-  };
+EnumStory.story = {
+  name: 'Enum'
+};

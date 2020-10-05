@@ -2,11 +2,11 @@ import React from 'react';
 import Header from './Header';
 
 export default {
-  title: 'Header',
+  title: 'Components',
 };
 
-export const header = () => <Header title={'DisLearning'} />;
+export const HeaderStory = () => <Header title={'DisLearning'} />;
 
-Header.story = {
+HeaderStory.story = {
   name: 'Header',
 };

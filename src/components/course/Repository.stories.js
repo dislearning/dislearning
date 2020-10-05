@@ -3,12 +3,12 @@ import React from 'react';
 import Respository from './Repository';
 
 export default {
-  title: 'Course',
+  title: 'Components',
 };
 
-export const repository = () =>
+export const RepositoryStory = () =>
   <Respository url={'https://github.com/gatsbyjs/gatsby'} />;
 
-repository.story = {
+RepositoryStory.story = {
   name: 'Repository',
 };
