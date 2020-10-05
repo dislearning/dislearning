@@ -11,7 +11,7 @@ const Header = ({ title, course }) => {
 
   return (
     <StyledMenu>
-      {course ? <div className={`container ${sb && 'change'}`} onClick={(x) => {
+      {course ? <div className={`container ${sb && 'change'}`} onClick={() => {
         setSb(!sb);
       }}>
         <div className='bar1'></div>
