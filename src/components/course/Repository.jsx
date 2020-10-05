@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import Icon from '../icon/Icon';
+import { FaGit } from 'react-icons/fa';
 
 const Repository = ({ url }) => (
   <a href={url} target={'_blank'}>
-    <Icon id={'git'} />&nbsp;
+    <FaGit />&nbsp;
     {url}
   </a>
 );

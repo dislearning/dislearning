@@ -2,12 +2,11 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Icon from '../icon/Icon';
-import {StyledEnum, StyledItems} from './EnumStyle.js'
+import { StyledEnum, StyledItems } from './EnumStyle.js'
 
-const Enum = ({ items, icon, separator }) => (
+const Enum = ({ items, Icon, separator }) => (
   <StyledEnum>
-    {icon && <><Icon id={icon} />&nbsp;</>}
+    {Icon && <Icon />}
     <StyledItems>
       {items.map((item, idx) => (
         <li key={idx}>
@@ -23,13 +22,13 @@ const Enum = ({ items, icon, separator }) => (
 
 Enum.propTypes = {
   items: PropTypes.array,
-  icon: PropTypes.string,
+  Icon: PropTypes.node,
   separator: PropTypes.string,
 };
 
 Enum.defaultProps = {
   items: [],
-  icon: null,
+  Icon: null,
   separator: ','
 };
 

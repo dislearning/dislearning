@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { FaTags } from 'react-icons/fa';
 
 import Enum from '../enum/Enum';
 
@@ -11,7 +12,7 @@ const mapItem = (item) => ({
 const Tags = ({ items }) => (
   <Enum
     items={items.map(mapItem)}
-    icon={'tags'}
+    Icon={FaTags}
   />
 );
 
