@@ -1,13 +1,21 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
-import {StyledCourse, StyledTitle} from './courseStyle';
+import { StyledCourse, StyledTitle } from './courseStyle';
+
+const StyledImage = styled.div`
+  background-image: url(${(props) => props.background});
+  width: 450px;
+  height: 300px;
+  background-size: cover;
+`;
 
 const Course = (props) => (
   <StyledCourse>
     <Link to={`/courses/${props.slug}`}>
-      <img src={props.image} />
+      <StyledImage background={props.image} />
     </Link>
     <StyledTitle>
       <Link to={`/courses/${props.slug}`}>
