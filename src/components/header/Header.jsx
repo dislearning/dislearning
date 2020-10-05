@@ -2,9 +2,6 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-import Categories from '../course/Categories';
-import Tags from '../course/Tags';
-
 import { StyledHeader, StyledMenu } from './HeaderStyle.js';
 import Sidebar from '../sidebar/Sidebar';
 
@@ -14,14 +11,13 @@ const Header = ({ title, course }) => {
 
   return (
     <StyledMenu>
-      {course && <div className='container change' onClick={(x) => {
-        x.target.classList.toggle('change');
+      {course ? <div className={`container ${sb && 'change'}`} onClick={(x) => {
         setSb(!sb);
       }}>
         <div className='bar1'></div>
         <div className='bar2'></div>
         <div className='bar3'></div>
-      </div>}
+      </div> : <div />}
       <div>
         <StyledHeader>
           <div>
