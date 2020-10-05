@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/dislearning',
   siteMetadata: {
     title: 'DisLearning',
     description:
