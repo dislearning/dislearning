@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
   grid-area: header;
   background: white;
   color: black;
@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledMenu = styled.menu`
+export const StyledMenu = styled.menu`
   grid-area: header;
   display: grid;
   grid-template-columns: 50px 1fr;
@@ -49,8 +49,3 @@ const StyledMenu = styled.menu`
     transform: rotate(45deg) translate(-8px, -8px);
   }
 `;
-
-export {
-  StyledHeader,
-  StyledMenu
-};

@@ -9,7 +9,7 @@ import { StyledHeader, StyledMenu } from './HeaderStyle.js';
 import Sidebar from '../sidebar/Sidebar';
 
 const Header = ({ title, course }) => {
-  const [sb, setSb] = useState(true);
+  const [sb, setSb] = useState(false);
   const url = course ? `/courses/${course.slug}` : '/';
 
   return (
@@ -22,16 +22,18 @@ const Header = ({ title, course }) => {
         <div className='bar2'></div>
         <div className='bar3'></div>
       </div>}
-      <StyledHeader>
-        <div>
-          <h1 style={{ margin: 0 }}>
-            <Link to={url} className={'home'}>
-              {title}
-            </Link>
-          </h1>
-        </div>
-      </StyledHeader>
-      {course && sb && <Sidebar course={course} />}
+      <div>
+        <StyledHeader>
+          <div>
+            <h1 style={{ margin: 0 }}>
+              <Link to={url} className={'home'}>
+                {title}
+              </Link>
+            </h1>
+          </div>
+        </StyledHeader>
+        {course && sb && <Sidebar course={course} />}
+      </div>
     </StyledMenu>
   );
 };
