@@ -9,10 +9,11 @@ const Reader = ({ course, unit }) => {
   const [source, setSource] = useState(null);
 
   useEffect(() => {
-    const uri = `${course.root}${unit}`;
-    fetch(uri)
-    .then(res => res.text())
-    .then(result => setSource(result));
+    fetch(`${course.root}${unit}`)
+      .then(res => res.text())
+      .then(result => {
+        setSource(result);
+      });
   }, [unit]);
 
   return (

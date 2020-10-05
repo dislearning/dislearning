@@ -24,7 +24,10 @@ const processor = unified()
   .use(highlight)
   .use(rehype2react, { createElement: React.createElement });
 
-const MarkdownRender = (props) => processor.processSync(props.source).contents;
+const MarkdownRender = ({ source }) => {
+  const vfile = processor.processSync(source);
+  return vfile.result;
+};
 
 MarkdownRender.propTypes = {
   source: PropTypes.string,
