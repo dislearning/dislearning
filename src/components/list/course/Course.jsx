@@ -7,7 +7,7 @@ import { StyledCourse, StyledTitle } from './courseStyle';
 
 const StyledImage = styled.div`
   background-image: url(${(props) => props.background});
-  width: 450px;
+  width: 100%;
   height: 300px;
   background-size: cover;
 `;
