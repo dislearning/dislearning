@@ -28,4 +28,4 @@ const StyledTitle = styled.div`
 export {
   StyledCourse,
   StyledTitle
-}
+};

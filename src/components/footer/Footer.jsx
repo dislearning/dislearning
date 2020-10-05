@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
 
-import {StyledFooter} from './FooterStyle.js'
+import {StyledFooter} from './FooterStyle.js';
 
 const Footer = ({ title }) => (
   <StyledFooter>

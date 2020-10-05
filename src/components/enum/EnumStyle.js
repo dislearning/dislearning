@@ -19,4 +19,4 @@ const StyledItems = styled.ul`
 export {
   StyledEnum,
   StyledItems
-}
+};

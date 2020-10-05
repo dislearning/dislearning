@@ -21,4 +21,4 @@ const StyledMain = styled.div`
 export {
   StyledLayout,
   StyledMain
-}
+};

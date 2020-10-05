@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { StyledEnum, StyledItems } from './EnumStyle.js'
+import { StyledEnum, StyledItems } from './EnumStyle.js';
 
 const Enum = ({ items, Icon, separator }) => (
   <StyledEnum>

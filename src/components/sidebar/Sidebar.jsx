@@ -25,8 +25,8 @@ const getNode = (node, course) => {
   );
 };
 
-const Sidebar = ({ course }) => {
-   return <StyledSidebar>
+const Sidebar = ({ course }) => (
+   <StyledSidebar>
     <p>
       <Link to={`/courses/${course.slug}`}>
         Course Description
@@ -38,7 +38,7 @@ const Sidebar = ({ course }) => {
       {JSON.parse(course.toc).map(rootNode => getNode(rootNode, course))}
     </ul>
   </StyledSidebar>
-};
+);
 
 Sidebar.propTypes = {
   course: PropTypes.object,

@@ -8,4 +8,4 @@ const StyledCourses = styled.div`
 
 export {
   StyledCourses
-}
+};

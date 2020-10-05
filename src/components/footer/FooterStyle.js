@@ -17,4 +17,4 @@ const StyledFooter = styled.footer`
 
 export {
   StyledFooter
-}
+};
