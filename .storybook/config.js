@@ -1,7 +1,6 @@
 import { configure } from '@storybook/react';
 
 import '../src/styles/reset.scss';
-import '../src/styles/font/styles.css';
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
