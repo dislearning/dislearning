@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import { StyledSidebar } from './StyledSidebar';
 import withLocation from '../hoc/withLocation';

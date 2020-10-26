@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 import { FiFileText } from 'react-icons/fi';
 
 import { StyledItem } from './StyledItem';
