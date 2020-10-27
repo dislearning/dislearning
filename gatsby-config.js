@@ -1,33 +1,42 @@
+const course = require('./data/course.json');
+
 module.exports = {
   pathPrefix: '/dislearning',
   siteMetadata: {
-    title: 'DisLearning',
-    description:
-      'Plataforma abierta para la creación de cursos mediante repositorios.',
-    authors: ['santiagotrigoporres@gmail.com', 'jlopezcur@gmail.com'],
+    title: course.title,
+    description: course.description,
+    authors: course.authors,
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
-    // 'gatsby-transformer-yaml',
-    // {
-    //   resolve: 'gatsby-plugin-copy-files',
-    //   options: {
-    //     source: `${__dirname}/src/data/courses`,
-    //     destination: '/courses'
-    //   }
-    // },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'courses',
-    //     ignore: [
-    //       '**/*.md'
-    //     ],
-    //     path: `${__dirname}/src/data/courses/`,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'units',
+        path: `${__dirname}/data`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-katex',
+            options: {
+              strict: 'ignore',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+          },
+          {
+            resolve: 'gatsby-remark-embedder',
+          }
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
@@ -35,7 +44,7 @@ module.exports = {
           {
             family: 'Lato',
             subsets: ['latin'],
-          }
+          },
         ],
       },
     },
@@ -48,7 +57,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'fullscreen',
-        icon: 'src/images/logo.png', // This path is relative to the root of the site.
+        icon: 'data/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
