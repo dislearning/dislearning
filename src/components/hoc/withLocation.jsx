@@ -2,7 +2,7 @@ import React from 'react';
 import { Location } from '@reach/router';
 import queryString from 'query-string';
 
-const withLocation = (Cmp) => {
+const withLocation = Cmp => {
   const Wrapper = (props) => (
     <Location>
       {({ location, navigate }) => (
