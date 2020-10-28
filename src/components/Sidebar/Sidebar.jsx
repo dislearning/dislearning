@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { StyledSidebar } from './StyledSidebar';
 import withLocation from '../hoc/withLocation';
@@ -31,5 +32,9 @@ const Sidebar = ({ location }) => (
     </ul>
   </StyledSidebar>
 );
+
+Sidebar.propTypes = {
+  location: PropTypes.object,
+};
 
 export default withLocation(Sidebar);

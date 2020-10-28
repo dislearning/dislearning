@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { navigate } from 'gatsby';
 import { FiFileText } from 'react-icons/fi';
 
@@ -9,3 +10,9 @@ export const Text = ({ title, slug, selected }) => (
     <FiFileText /> {title}
   </StyledItem>
 );
+
+Text.propTypes = {
+  title: PropTypes.string,
+  slug: PropTypes.string,
+  selected: PropTypes.bool,
+};
